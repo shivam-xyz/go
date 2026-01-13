@@ -1,0 +1,5 @@
+go mod init PROJECT_PATH_OR_PROJECT_NAME_HERE
+go mod tidy
+go run .
+    OR
+go run TARGET_FILE_HERE
