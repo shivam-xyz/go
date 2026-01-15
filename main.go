@@ -57,4 +57,66 @@ func main() {
 
 	fmt.Println(name, firstname, isPresent, designation, isSunday, age, ageNew)
 
+	//////////////////////////////////////////////////////////////////////////////////////////////
+
+	// FLOATING POINTS :
+
+	// score := 25.11     float32 / float64
+	// var score float32 = 25.11
+
+	// STATEMENT FLOWS :
+
+	// if {} else if {} else if {} else {}
+
+	// marks := 5
+
+	// if marks > 60 {
+	// 	fmt.Println("You're passed")
+	// } else if marks < 60 && marks > 30 {
+	// 	fmt.Println("You're passed with 2nd Grade")
+	// } else if marks < 30 && marks > 15 {
+	// 	fmt.Println("You're very poor")
+	// } else {
+	// 	fmt.Println("Please don't come to school again in future")
+	// }
+
+	if marks := 5; marks > 60 {
+		fmt.Println("You're passed")
+	} else if marks < 60 && marks > 30 {
+		fmt.Println("You're passed with 2nd Grade")
+	} else if marks < 30 && marks > 15 {
+		fmt.Println("You're very poor")
+	} else {
+		fmt.Println("Please don't come to school again in future")
+	}
+
+	// SWITCH CASE :
+
+	day := 6
+
+	// switch {
+	// 	case CONDITION_WILL_BE_HERE:
+	// 		fmt.Println("Case 1 output will be here")
+	// 	case CONDITION_WILL_BE_HERE:
+	// 		fmt.Println("Case 2 output")
+	// 	case CONDITION_THREE_WILL_BE_HERE, CONDITION_FOUR, CONDITION_FIVE, CONDITION_SO_ON:
+	// 		fmt.Println("Outputs")
+	// 	default:
+	// 		fmt.Println("This is the default case")
+
+	// }
+
+	switch day {
+	case 0:
+		fmt.Println("This is Sunday, today no-office")
+	case 1:
+		fmt.Println("Today is Monday, Office-day")
+	case 2, 3, 4, 5:
+		fmt.Println("This all will be the labourie days!")
+	case 6:
+		fmt.Println("Today is Saturday, Foodie-day!")
+	default:
+		fmt.Println("You have mentioned the wrong day, correct properly")
+	}
+
 }
