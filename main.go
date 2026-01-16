@@ -119,4 +119,104 @@ func main() {
 		fmt.Println("You have mentioned the wrong day, correct properly")
 	}
 
+	score := 85
+
+	switch {
+	case score >= 90:
+		fmt.Println("This is A Grade")
+	case score >= 75:
+		fmt.Println("This is Grade B")
+	case score >= 50:
+		fmt.Println("This is Grade C")
+	default:
+		fmt.Println("You failed!")
+	}
+
+	x := 10
+
+	switch x % 2 {
+	case 0:
+		fmt.Println("This is Even number")
+	case 1:
+		fmt.Println("This is Odd Number")
+
+	}
+
+	var data interface{} = "Hello"
+
+	switch v := data.(type) {
+	case int:
+		fmt.Println("This is integer", v)
+	case string:
+		fmt.Println("This is A String", v)
+	case bool:
+		fmt.Println("This is Boolean", v)
+	default:
+		fmt.Println("This is unknown data type", v)
+	}
+
+	///////////////////////////////////////////////////////////////////////////////////////////
+
+	// LOOP :
+
+	// for YOUR_CONDITIONS_HERE {
+
+	// }
+
+	for i := 0; i < 5; i++ {
+		fmt.Println(i)
+	}
+
+	p := 0
+
+	// while p < 5 {
+	// 	fmt.Println(p);
+	// 	p++
+	// }
+
+	for p < 5 {
+		fmt.Println(p)
+		p++
+	}
+
+	// INFINITE_LOOP :
+
+	// for {
+	// 	fmt.Println("Running in string")
+	// }
+
+	for i := 0; i <= 5; i++ {
+		if i == 3 {
+			continue
+		}
+		if i == 5 {
+			break
+		}
+		fmt.Println(i)
+	}
+
+	scores := [4]int{90, 60, 40, 20}
+
+	for i, v := range scores {
+		fmt.Println(i, v)
+	}
+
+	users := []string{"Bunny", "Arch", "Debian", "Ubuntu"}
+
+	for _, v := range users {
+		fmt.Println(v)
+	}
+
+	ages := map[string]int{"Sakib G": 62, "Bunny": 4, "Robin": 26, "Smart": 25}
+
+	for name, age := range ages {
+		fmt.Println(name, age)
+	}
+
+	studentName := "Bunny"
+
+	for i, ch := range studentName {
+		fmt.Println(i, ch, string(ch))
+	}
+
 }
