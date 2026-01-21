@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 //Very Important, short handed will not work in Global Scope
 // var age = 55
@@ -219,4 +221,65 @@ func main() {
 		fmt.Println(i, ch, string(ch))
 	}
 
+	/////////////////////////////////////////////////////////////////////////////////
+
+	// FUNCTIONS :
+
+	// func sumTwoNumber (param type) returnType {
+	// 	return value
+	// }
+
+	userName := "Bunny"
+
+	message := greet(userName)
+
+	// fmt.Println(greet(userName))
+
+	fmt.Println(message)
+
+	// fmt.Println(addition(2, 3))
+
+	_, err := divide(25, 5)
+
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	// fmt.Println(res)
+
+	logMessage("This is a log")
+
+	totalSum := total(1, 25, 98, 22, 87, 67)
+
+	fmt.Println(totalSum)
+
+}
+
+func greet(name string) string {
+	return "Hello " + name
+}
+
+func addition(a int, b int) int {
+	return a + b
+}
+
+func multiply(a, b, c, d int) {}
+
+func divide(a, b int) (int, error) {
+	if b == 0 {
+		return 0, fmt.Errorf("Cannot divide by 0")
+	}
+	return a / b, nil
+}
+
+func logMessage(msg string) {
+	fmt.Println(msg)
+}
+
+func total(nums ...int) int {
+	sum := 0
+	for _, v := range nums {
+		sum += v
+	}
+	return sum
 }
